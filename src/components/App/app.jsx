@@ -62,6 +62,9 @@ function App() {
   }, [])
 
   useEffect(() => {
+    {location.pathname==='/dog2'&&navigate("/")}
+   },[])
+  useEffect(() => {
     handleRequest()
   }, [debounceSearchQuery])
 
@@ -119,7 +122,6 @@ function App() {
               <button className="btn" onClick={() => setModalActive(true)}>
                 Изменить
               </button>
-                {location.pathname==='/dog2'&&navigate("/")}
             </>
           </Header>
           <main className='content container'>
